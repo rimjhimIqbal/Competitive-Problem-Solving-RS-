@@ -5,17 +5,30 @@
   (b) O(root x)
 
 
-2.class Solution {
-    public int maxArea(int[] height) {
-        int left=0;
-        int maxW;
-        int right=height.length-1;
-
-        if(height{left]>height[right]){
-            left++;
+2.class Task2{
+    public static void mostWater(Integer[] height){
+        int l=0;
+        int r=height.length-1;
+        int Marea=0;
+        while(l<r){
+            int HL=height[left];
+            int HR=height[right];
+            int Minh=HL; 
+            if(HR<HL){
+               Minh=HR;
+            }
+            int wiidth=r-l;
+            int areea=Minh*wiidth;
+            if(areea>Marea){
+               Marea=areea;
+            }
+            if(HL<HR){
+               l++;
+            }
+            else{
+               r--;
+            }
         }
-        else{
-            right++;
-        }
+        System.out.println(Marea);
     }
 }
